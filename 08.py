@@ -42,7 +42,7 @@ def solution2(data_list):
     }]
     all_node_list = []
     index_map = {0: 0, }
-    this_index = 2; parent_index = 0; order = 1
+    this_index = 2; order = 1
     while this_index < len(data_list):
         if stack[-1]['child_count'] != 0:
             stack[-1]['child_count'] -= 1
@@ -96,4 +96,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
