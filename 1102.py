@@ -31,7 +31,7 @@ def main():
             print(tmp)
             maxV = tmp[3]
             ans = tmp
-    print("ans", tmp)
+    print("ANS =>", ans)
 
 
 
