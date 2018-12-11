@@ -15,7 +15,7 @@ def guess_solution1_answer(positions):
     xs = list(map(lambda e: e[0], positions))
     ys = list(map(lambda e: e[1], positions))
     min_x, max_x, min_y, max_y = min(xs), max(xs), min(ys), max(ys)
-    if max_y - min_y >= 10: return False
+    if max_y - min_y >= 19: return False
     for y in range(min_y, max_y + 1):
         for x in range(min_x, max_x + 1):
             if (x, y) in positions:
@@ -46,9 +46,8 @@ def solution2(data):
 
 
 def main():
-    filename = 'tmp.txt'
+    filename = 'input.txt'
     data = read_txt(filename)
-    # 信息高10
     solution1(data)
     # solution2(data)
 
