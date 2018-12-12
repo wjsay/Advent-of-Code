@@ -25,7 +25,7 @@ def solution1(data, gen=20):
     for rule in data[2:]:
         if rule[-1] == '#':
             rule_set.add(rule[0:5])
-    for year in range(0, gen):
+    for year in range(1, gen + 1):
         state = work(state)
         new_state = str('')
         for idx in range(0, len(state) - 5):
@@ -50,7 +50,7 @@ def solution2(data, gen):
     for rule in data[2:]:
         if rule[-1] == '#':
             rule_set.add(rule[0:5])
-    for year in range(0, gen):
+    for year in range(1, gen + 1):
         state = work(state)
         new_state = str('')
         for idx in range(0, len(state) - 5):
@@ -67,14 +67,14 @@ def solution2(data, gen):
     state = state[state.find('#'):]
     for idx, ch in enumerate(list(state), left):
         if ch == '#':
-            count += idx + (gen - year - 1)
+            count += idx + (gen - year)
     print(count)
 
 
 def main():
     filename = 'input.txt'
     data = read_txt(filename)
-    # solution1(data)
+    solution1(data)
     # solution2(data, 50000000000)
 
 
