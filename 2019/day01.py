@@ -11,6 +11,13 @@ def read_text(filename):
 def solution1(data):
     ret = 0
     for v in data:
+        a = math.floor(v / 3) - 2
+        ret += a
+    print(ret)
+
+def solution2(data):
+    ret = 0
+    for v in data:
         a = 0
         while v > 0:
             v = math.floor(v / 3) - 2
@@ -21,10 +28,11 @@ def solution1(data):
     print(ret)
 
 def main():
-    filename = 'input.txt'
-    # filename = 'tmp.txt'
+    filename = 'src/input.txt'
+    # filename = 'src/tmp.txt'
     data = read_text(filename)
-    solution1(data)
+    # solution1(data)
+    solution2(data)
 
 if __name__ == "__main__":
     main()
